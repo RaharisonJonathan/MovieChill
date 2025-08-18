@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { TMDB_CONFIG } from "./api";
 
 export const useFetch = <T>(fetchFunction : () => Promise<T>, autoFetch = true) => {
 
@@ -35,3 +36,5 @@ export const useFetch = <T>(fetchFunction : () => Promise<T>, autoFetch = true) 
 
     return {data, loading, error, refetch : fetchData, reset}
 }
+
+
